@@ -4,8 +4,9 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useStore } from "../store";
 import { agentsById } from "../data/agents";
-import type { ChatMessage } from "../types";
+import type { Agent, ChatMessage } from "../types";
 import { PreBlock } from "./CodeBlock";
+import { Avatar } from "./Avatar";
 
 function timeOf(ts: number) {
   return new Date(ts).toLocaleTimeString([], {
@@ -14,9 +15,11 @@ function timeOf(ts: number) {
   });
 }
 
-function Message({ msg }: { msg: ChatMessage }) {
+function Message({ msg, agent }: { msg: ChatMessage; agent: Agent }) {
+  const who = msg.role === "user" ? "you" : agent.name.toLowerCase();
   return (
     <div className={`msg ${msg.role}`}>
+      <span className="who">{who} ~$</span>
       <div className="bubble">
         {msg.role === "assistant" ? (
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ pre: PreBlock }}>
@@ -75,10 +78,10 @@ export function ChatPanel() {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 320, damping: 34 }}
+            transition={{ type: "tween", ease: [0.4, 0, 0.2, 1], duration: 0.22 }}
           >
             <div className="chat-head">
-              <span className="avatar">{agent.avatar}</span>
+              <Avatar seed={agent.id} size={42} />
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className="h-name">{agent.name}</div>
                 <div className="h-role">{agent.role}</div>
@@ -89,33 +92,34 @@ export function ChatPanel() {
                 title="Clear chat"
                 onClick={() => selectedId && clearChat(selectedId)}
               >
-                ⌫
+                clr
               </button>
               <button
                 className="icon-btn"
                 title="Close"
                 onClick={() => selectAgent(null)}
               >
-                ✕
+                x
               </button>
             </div>
 
             <div className="chat-log" ref={logRef}>
               {messages.length === 0 ? (
                 <div className="empty-chat">
-                  Say something to <strong>{agent.name}</strong>. Responses stream
-                  live from your local Ollama model.
+                  message {agent.name.toLowerCase()} — responses stream live from
+                  your local ollama model.
                 </div>
               ) : (
-                messages.map((m) => <Message key={m.id} msg={m} />)
+                messages.map((m) => <Message key={m.id} msg={m} agent={agent} />)
               )}
             </div>
 
             <div className="chat-input">
+              <span className="prompt">&gt;</span>
               <textarea
                 value={draft}
                 rows={1}
-                placeholder={`Message ${agent.name}…`}
+                placeholder={`message ${agent.name.toLowerCase()}…`}
                 onChange={(e) => setDraft(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && !e.shiftKey) {
@@ -125,7 +129,7 @@ export function ChatPanel() {
                 }}
               />
               <button className="send-btn" onClick={submit} disabled={streaming}>
-                {streaming ? "…" : "Send"}
+                {streaming ? "···" : "send"}
               </button>
             </div>
           </motion.aside>

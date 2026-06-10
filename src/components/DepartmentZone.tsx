@@ -8,9 +8,8 @@ interface Props {
 export function DepartmentZone({ department }: Props) {
   return (
     <section className="zone" style={{ ["--dept" as string]: department.color }}>
-      <div className="zone-glow" />
       <div className="zone-header">
-        <span className="chip" />
+        <span className="sq" />
         <span className="name">{department.name}</span>
         <span className="count">{department.agents.length}</span>
       </div>

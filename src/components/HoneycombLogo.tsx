@@ -27,23 +27,18 @@ export function HoneycombLogo({ size = 28 }: Props) {
     [cx + dx / 2, cy + r * 1.5],
   ];
 
+  const color = "#d2d6dd";
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
-      <defs>
-        <linearGradient id="hc" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#b69bff" />
-          <stop offset="1" stopColor="#6d5cff" />
-        </linearGradient>
-      </defs>
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" shapeRendering="crispEdges">
       {cells.map(([x, y], i) => (
         <polygon
           key={i}
           points={hex(x, y, r)}
-          fill={i === 0 ? "url(#hc)" : "none"}
-          stroke="url(#hc)"
-          strokeWidth="1.6"
-          strokeLinejoin="round"
-          opacity={i === 0 ? 1 : 0.85}
+          fill={i === 0 ? color : "none"}
+          stroke={color}
+          strokeWidth="1.4"
+          strokeLinejoin="miter"
+          opacity={i === 0 ? 1 : 0.7}
         />
       ))}
     </svg>
