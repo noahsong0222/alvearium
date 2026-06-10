@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import { TopBar } from "./components/TopBar";
-import { OfficeFloor } from "./components/OfficeFloor";
+import { OfficeRoom } from "./components/OfficeRoom";
+import { OfficeFeed } from "./components/OfficeFeed";
 import { ChatPanel } from "./components/ChatPanel";
-import { useAmbient } from "./hooks/useAmbient";
+import { useOfficeLife } from "./office/useOfficeLife";
 import { useStore } from "./store";
 import { pingOllama } from "./lib/ollama";
 
 export function App() {
-  useAmbient();
+  useOfficeLife();
   const setOllamaUp = useStore((s) => s.setOllamaUp);
 
   useEffect(() => {
@@ -24,7 +25,8 @@ export function App() {
   return (
     <div className="app">
       <TopBar />
-      <OfficeFloor />
+      <OfficeRoom />
+      <OfficeFeed />
       <ChatPanel />
     </div>
   );

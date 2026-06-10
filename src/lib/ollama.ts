@@ -12,9 +12,13 @@ export async function streamChat(
   history: ChatMessage[],
   onToken: (chunk: string) => void,
   signal?: AbortSignal,
+  systemExtra?: string,
 ): Promise<string> {
+  const system = systemExtra
+    ? `${agent.systemPrompt}\n\n${systemExtra}`
+    : agent.systemPrompt;
   const messages = [
-    { role: "system", content: agent.systemPrompt },
+    { role: "system", content: system },
     ...history
       .filter((m) => !m.streaming)
       .map((m) => ({ role: m.role, content: m.content })),

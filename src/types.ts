@@ -60,3 +60,16 @@ export interface ChatMessage {
   /** True while the assistant message is still streaming in. */
   streaming?: boolean;
 }
+
+/** One line in the live office feed (the org-wide activity log). */
+export interface FeedEvent {
+  id: string;
+  /** Agent id of who is speaking/acting (or "you" for the operator). */
+  fromId: string;
+  /** Optional target agent id (for "X delegated to Y"). */
+  toId?: string;
+  kind: "command" | "delegate" | "reply" | "synthesis" | "chatter" | "note";
+  text: string;
+  timestamp: number;
+  streaming?: boolean;
+}
