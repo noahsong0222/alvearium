@@ -1,0 +1,48 @@
+{
+  "project": "Alvearium",
+  "description": "A multi-agent AI office visualizer. Each agent is a git submodule under agents/.",
+  "departments": [
+    { "name": "Management",          "color": "#a855f7" },
+    { "name": "Engineering",         "color": "#22c55e" },
+    { "name": "Design",              "color": "#ec4899" },
+    { "name": "Trading Floor",       "color": "#eab308" },
+    { "name": "Research",            "color": "#3b82f6" },
+    { "name": "People & Culture",    "color": "#fb7185" },
+    { "name": "Meta / Intelligence", "color": "#14b8a6" }
+  ],
+  "agents": [
+    { "id": "noah",      "name": "Noah",      "role": "CEO",                          "department": "Management",          "color": "#a855f7", "path": "agents/noah" },
+    { "id": "vincent",   "name": "Vincent",   "role": "COO",                          "department": "Management",          "color": "#a855f7", "path": "agents/vincent" },
+    { "id": "victoire",  "name": "Victoire",  "role": "Chief of Staff",               "department": "Management",          "color": "#a855f7", "path": "agents/victoire" },
+    { "id": "lucifer",   "name": "Lucifer",   "role": "Devil's Advocate / Red Team",  "department": "Management",          "color": "#a855f7", "path": "agents/lucifer" },
+    { "id": "amaury",    "name": "Amaury",    "role": "Innovation Lead",              "department": "Management",          "color": "#a855f7", "path": "agents/amaury" },
+
+    { "id": "marcel",    "name": "Marcel",    "role": "Senior Dev",                   "department": "Engineering",         "color": "#22c55e", "path": "agents/marcel" },
+    { "id": "victor",    "name": "Victor",    "role": "Backend Dev",                  "department": "Engineering",         "color": "#22c55e", "path": "agents/victor" },
+    { "id": "laurent",   "name": "Laurent",   "role": "Frontend Dev",                 "department": "Engineering",         "color": "#22c55e", "path": "agents/laurent" },
+    { "id": "andre",     "name": "Andre",     "role": "DevOps",                       "department": "Engineering",         "color": "#22c55e", "path": "agents/andre" },
+    { "id": "raphael",   "name": "Raphael",   "role": "Security Engineer",            "department": "Engineering",         "color": "#22c55e", "path": "agents/raphael" },
+    { "id": "alexander", "name": "Alexander", "role": "ML / AI Engineer",             "department": "Engineering",         "color": "#22c55e", "path": "agents/alexander" },
+
+    { "id": "camille",   "name": "Camille",   "role": "UI Designer",                  "department": "Design",              "color": "#ec4899", "path": "agents/camille" },
+    { "id": "vivienne",  "name": "Vivienne",  "role": "Product / UX Designer",        "department": "Design",              "color": "#ec4899", "path": "agents/vivienne" },
+    { "id": "valerie",   "name": "Valerie",   "role": "Brand Designer",               "department": "Design",              "color": "#ec4899", "path": "agents/valerie" },
+
+    { "id": "lucien",    "name": "Lucien",    "role": "Quant Analyst",                "department": "Trading Floor",       "color": "#eab308", "path": "agents/lucien" },
+    { "id": "hugo",      "name": "Hugo",      "role": "Trader",                       "department": "Trading Floor",       "color": "#eab308", "path": "agents/hugo" },
+    { "id": "yves",      "name": "Yves",      "role": "Risk Manager",                 "department": "Trading Floor",       "color": "#eab308", "path": "agents/yves" },
+    { "id": "valentino", "name": "Valentino", "role": "Portfolio Manager",            "department": "Trading Floor",       "color": "#eab308", "path": "agents/valentino" },
+    { "id": "seraphine", "name": "Séraphine", "role": "Macro Strategist",             "department": "Trading Floor",       "color": "#eab308", "path": "agents/seraphine" },
+
+    { "id": "armand",    "name": "Armand",    "role": "Web Researcher",               "department": "Research",            "color": "#3b82f6", "path": "agents/armand" },
+    { "id": "thierry",   "name": "Thierry",   "role": "Data Analyst",                 "department": "Research",            "color": "#3b82f6", "path": "agents/thierry" },
+    { "id": "rene",      "name": "René",      "role": "Market Researcher",            "department": "Research",            "color": "#3b82f6", "path": "agents/rene" },
+    { "id": "pierre",    "name": "Pierre",    "role": "Research Scientist",           "department": "Research",            "color": "#3b82f6", "path": "agents/pierre" },
+
+    { "id": "rosalie",   "name": "Rosalie",   "role": "Organizational Psychologist",  "department": "People & Culture",    "color": "#fb7185", "path": "agents/rosalie" },
+    { "id": "celine",    "name": "Céline",    "role": "HR Lead",                      "department": "People & Culture",    "color": "#fb7185", "path": "agents/celine" },
+
+    { "id": "gautier",   "name": "Gautier",   "role": "Memory Keeper",                "department": "Meta / Intelligence", "color": "#14b8a6", "path": "agents/gautier" },
+    { "id": "aurelien",  "name": "Aurélien",  "role": "Forecaster",                   "department": "Meta / Intelligence", "color": "#14b8a6", "path": "agents/aurelien" }
+  ]
+}

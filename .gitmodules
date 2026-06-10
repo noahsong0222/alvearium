@@ -1,0 +1,81 @@
+[submodule "agents/noah"]
+	path = agents/noah
+	url = https://github.com/noahsong0222/noah.git
+[submodule "agents/vincent"]
+	path = agents/vincent
+	url = https://github.com/noahsong0222/vincent.git
+[submodule "agents/victoire"]
+	path = agents/victoire
+	url = https://github.com/noahsong0222/victoire.git
+[submodule "agents/lucifer"]
+	path = agents/lucifer
+	url = https://github.com/noahsong0222/lucifer.git
+[submodule "agents/amaury"]
+	path = agents/amaury
+	url = https://github.com/noahsong0222/amaury.git
+[submodule "agents/marcel"]
+	path = agents/marcel
+	url = https://github.com/noahsong0222/marcel.git
+[submodule "agents/victor"]
+	path = agents/victor
+	url = https://github.com/noahsong0222/victor.git
+[submodule "agents/laurent"]
+	path = agents/laurent
+	url = https://github.com/noahsong0222/laurent.git
+[submodule "agents/andre"]
+	path = agents/andre
+	url = https://github.com/noahsong0222/andre.git
+[submodule "agents/raphael"]
+	path = agents/raphael
+	url = https://github.com/noahsong0222/raphael.git
+[submodule "agents/alexander"]
+	path = agents/alexander
+	url = https://github.com/noahsong0222/alexander.git
+[submodule "agents/camille"]
+	path = agents/camille
+	url = https://github.com/noahsong0222/camille.git
+[submodule "agents/vivienne"]
+	path = agents/vivienne
+	url = https://github.com/noahsong0222/vivienne.git
+[submodule "agents/valerie"]
+	path = agents/valerie
+	url = https://github.com/noahsong0222/valerie.git
+[submodule "agents/lucien"]
+	path = agents/lucien
+	url = https://github.com/noahsong0222/lucien.git
+[submodule "agents/hugo"]
+	path = agents/hugo
+	url = https://github.com/noahsong0222/hugo.git
+[submodule "agents/yves"]
+	path = agents/yves
+	url = https://github.com/noahsong0222/yves.git
+[submodule "agents/valentino"]
+	path = agents/valentino
+	url = https://github.com/noahsong0222/valentino.git
+[submodule "agents/seraphine"]
+	path = agents/seraphine
+	url = https://github.com/noahsong0222/seraphine.git
+[submodule "agents/armand"]
+	path = agents/armand
+	url = https://github.com/noahsong0222/armand.git
+[submodule "agents/thierry"]
+	path = agents/thierry
+	url = https://github.com/noahsong0222/thierry.git
+[submodule "agents/rene"]
+	path = agents/rene
+	url = https://github.com/noahsong0222/rene.git
+[submodule "agents/pierre"]
+	path = agents/pierre
+	url = https://github.com/noahsong0222/pierre.git
+[submodule "agents/rosalie"]
+	path = agents/rosalie
+	url = https://github.com/noahsong0222/rosalie.git
+[submodule "agents/celine"]
+	path = agents/celine
+	url = https://github.com/noahsong0222/celine.git
+[submodule "agents/gautier"]
+	path = agents/gautier
+	url = https://github.com/noahsong0222/gautier.git
+[submodule "agents/aurelien"]
+	path = agents/aurelien
+	url = https://github.com/noahsong0222/aurelien.git
